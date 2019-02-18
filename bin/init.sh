@@ -17,7 +17,9 @@ cp debian/compat essentials
 cp debian/rules essentials
 cp debian/control essentials
 
-mv debian debian.ori
+sed  -i 's/unknown/education/' essentials/control  
+
+mv debian ../debian.ori
 mv essentials debian
 #cd debian
 #sed -i  's/1.0-1/1.0/'  changelog
